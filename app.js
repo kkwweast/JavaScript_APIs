@@ -1,70 +1,38 @@
+//Fetch example
+console.log
+const searchButton = document.querySelector("#submitSearch");
+const searchInput = document.querySelector("#searchWord");
+const gifing = document.querySelector.apply("#imageContainer > img");
+const feedbackPara = document.querySelector("#feedback");
 
+const mainElement = querySelector("main");
+mainElement.appendChild(feedbackPara);
 
+sC    
+const apiKey = "7ece3c0778d40996867be082fcf7a8ad ";
 
+const searchTerm = searchInput.value;
 
+//Exercise 2 Section
 
-//This is my giphy API key
-const APIKEY = "http://api.openweathermap.org/data/2.5/weather";
+   searchButton.addEventListener("click", () => {
+ fetch(`https://?api_key=<iframe src="https://giphy.com/embed/tsX3YMWYzDPjAARfeg" width="376" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tiktok-bear-tsX3YMWYzDPjAARfeg">via GIPHY</a></p>e082fcf7a8ad}&s=${searchInput.value}`)
+   });
+   fetch(apiUrl)
 
-console.log("Hello Fetch API!");
+   .then(( result) => result.json())
 
-//query paramets follow a ?
-//name=valu pairs
-//each pair seperated by a &
-const WEATHER_URL ="https://api.openweathermap.org/data/2.5/weather";
+   .then((anser) => {
+    console.log(answer);
 
-const QUERY_PARAMS = "?quhoover=&a5a839a780c1d61b9710aca75a4e11fa&units=imperial";
-
-
-
-fetch(WEATHER_URL + QUERY_PARAMS);
-
-    .then((response) => {
-        return response.json();
-    })
-    .then((weather) => {
-        console.log(weather);
-        //do anything with the weather data
-        document.querySelector(".title").textContent =
-    })
-    .catch((err) => console.error(err));
-
-    function displayWeather(weather) {
-        document.querySelector(
-            ".title"
-           ) .textContent = `It is currently ${weather.main.temp} in ${wather.name}
-        });
-
- async function getWeather() {
-       try{
-        let response = await fetch(WEATHER_URL + QERY_PARAMS);
-        let weather = await response.json();
-         displayWeather(weather);
-       }catch(err) {
-        console.error(err);
-       }
-    }
-
-
-
-
-       }
-    }
-
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           `
-    }
     
-        
-    
-    
+     }
+   
+
+ 
+
+
+
+
+
+   
