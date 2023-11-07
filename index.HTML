@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript APIs</title>
-  </head>
-  <body>
-    <main style="display: flex; justify-content: center; align-items: center; text-align: center;">
-      <div>
-        <h1>Gotta love the API!!</h1>
-        <p></p>
-        <p id="feedback"></p>
-        <div>
-          <label for="searchWord">Giphy Search:</label>
-          <input style="margin: 2rem;" type="text" id="searchWord" />
-          <button id="submitSearch">Giphy by Search</button>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy API Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Giphy API Example</h1>
+    <div class="center">
+    <input type="text" id="searchWord">
+    <button id="submitSearch">Search</button>
+    </div>
+    <div id="imageContainer">
+        <img id="gifImg" alt="gif Image">
+    </div>
+    <p id="feedBack"></p>
 
-        <p id="feedback"></p>
-
-        <div id="imageContainer" style="max-width: 680px">
-          <img src="#" alt="Giphy Selection" style="width: 100%; height: auto" />
-        </div>
-      </div>
-    </main>
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
+
+
+
+
 
 
 

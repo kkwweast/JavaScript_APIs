@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(202, 173, 230);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#searchWord {
+    margin-right: 10px;
+}

@@ -1,34 +1,26 @@
-//Exercise 1 section
 
+document.addEventListener("DOMContentLoaded", () => {
+  const searchButton = document.querySelector('#submitSearch');
+  const searchInput = document.querySelector("#searchWord");
+  const gifImg = document.querySelector("#gifImg");
+  const feedbackPara = document.querySelector("#feedBack");
 
-    //Exercise 1 section
-    console.log("EXERCISE 1:\n=========\n");
+  searchButton.addEventListener("click", () => {
+      const searchTerm = searchInput.value;
+      const apiKey = "6AHYHr1rScuEGI7iZPtPO5yzOwWT8jVf";
+      const url = `https://api.giphy.com/v1/gifs/translate?api_key=${apiKey}&s=${searchTerm}`;
 
-    const searchButton = document.querySelector('#submitSearch');
-    const searchInput = document.querySelector('#searchWord');
-    const gifImg = document.querySelector("#imageContainer > img");
-    const feedbackParagraph = document.querySelector('#feedback');
-
-    const apiKey = "whuy34h37vIDTby1YPjJn7hsDsXYMj9F"; // Replace 'YOUR_API_KEY' with your Giphy API key
-
-    searchButton.addEventListener("click", () => {
-      fetch(`https://api.giphy.com/v1/gifs/translate?api_key=whuy34h37vIDTby1YPjJn7hsDsXYMj9F&s=dogs`)
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result);
-
-          if (result.data && result.data.images && result.data.images.original.url) { // Adjusted the condition
-            gifImg.src = result.data.images.original.url;
-            feedbackParagraph.textContent = "";
-            searchInput.value = "";
-          } else {
-            feedbackParagraph.textContent = "No GIF found"; // Corrected the variable name
-            searchInput.value = "";
-          }
-        })
-        .catch((err) => {
+      fetch(url)
+      .then(response => response.json())
+      .then(res => {
+          console.log(res);
+          gifImg.src = res.data.images.original.url;
+          searchInput.value = "";
+          feedbackPara.textContent = "";
+      })
+      .catch(err => {
           console.error(err);
-          feedbackParagraph.textContent = "An error occurred. Please try again later."; // Updated the error message
-        });
-    });
- 
+          feedbackPara.textContent = err.message;
+      });
+  });
+});
